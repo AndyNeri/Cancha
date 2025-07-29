@@ -1,5 +1,7 @@
 {
   "extends": "expo/tsconfig.base",
+  "module": "ESNext",
+  "moduleResolution": "Bundler",
   "compilerOptions": {
     "strict": true,
     "paths": {
@@ -14,4 +16,5 @@
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
 , "app/Login.tsx", "app/Home.tsx"  ]
+
 }
