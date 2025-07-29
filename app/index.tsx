@@ -1,7 +1,8 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import "react-native-gesture-handler";
-
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from "./Home";
 import Login from "./Login";
 
@@ -17,14 +18,21 @@ function MyStack() {
         title: 'CANCHA',
         headerTintColor: 'white',
         headerTitleAlign: 'left',
-        headerStyle: {backgroundColor: '#525FE1'},
+        headerStyle: {backgroundColor: '#23c461'},
       }}/>
       <Stack.Screen name="Home" component={Home} 
             options={{
-        title: 'Cancha',
+        title: 'CANCHA',
         headerTintColor: 'white',
-        headerTitleAlign: 'center',
-        headerStyle: {backgroundColor: '#525FE1'},
+        headerTitleAlign: 'left',
+        headerStyle: {backgroundColor: '#23c461'},
+        headerLeft: () => null,
+        headerRight: () => (
+          
+          <View style={{marginRight:20}}><FontAwesome name="user-circle-o" size={30} color="#e0e4e2ff" onPress={() => alert('Icono perfil')}/></View>
+
+        ),
+        
       }}/>
     </Stack.Navigator>
   );
