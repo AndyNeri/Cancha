@@ -1,10 +1,9 @@
-import { StyleSheet, View } from "react-native";
-import "react-native-gesture-handler";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { createStackNavigator } from "@react-navigation/stack";
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { StyleSheet, View } from "react-native";
+import "react-native-gesture-handler";
+import Login from "../Login";
 import Home from "./Home";
-import Login from "./Login";
 
 export default function Index() {
 
